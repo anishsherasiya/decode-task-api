@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+    'STRIPE_KEY' => env('STRIPE_KEY', 'pk_test_51M41cDSISWlllZwwnr02qIkG3kTS7o6mDvSVdEll0QzzLo8mqecELCrsXGpTBIFsB85yCVi0Sj78H3ZMcUQhWTsW00EUpZD1rL'),
+    'STRIPE_SECRET' => env('STRIPE_SECRET', 'sk_test_51M41cDSISWlllZww2RjmGM4Kmf2nyh9w2cHeAF23D8hnQM31QV0QzvyqmN3oqkiWaadDLxYupfDL7sZqvhrqsLDM000NUDtyEg'),
+    'STRIPE_WEBHOOK_SECRET' => env('STRIPE_WEBHOOK_SECRET', 'whsec_FzA3kp9aBH5iVYNzhedy0CULU4QZuujv'),
+    'CASHIER_CURRENCY' => env('CASHIER_CURRENCY', 'usd'),
+];
