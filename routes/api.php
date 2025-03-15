@@ -6,7 +6,7 @@ use App\Http\Controllers\CreditSystemController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebhookController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CSVImportController;
 
 Route::controller(AuthController::class)->group(function(){
     Route::post('register', 'register');
@@ -25,6 +25,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/purchase-credits', [CreditSystemController::class, 'purchaseCredit']);
     Route::get('/credits', [CreditSystemController::class, 'getCredit']);
+
+    Route::post('csv-import', [CSVImportController::class, 'import'])->middleware('throttle:5,1');
+    Route::get('get-users', [CSVImportController::class, 'getUsers'])->middleware('throttle:5,1')   ;
 
 });
 

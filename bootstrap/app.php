@@ -14,6 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
+    ->withEvents(discover: [
+        __DIR__.'/../app/Listeners',
+    ])
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (Throwable $e) {
             if ($e instanceof Illuminate\Auth\AuthenticationException) {
@@ -22,21 +25,21 @@ return Application::configure(basePath: dirname(__DIR__))
                     'message' => 'Unauthorized access. Please log in.',
                 ], 401);
             }
-        
+
             if ($e instanceof Illuminate\Http\Exceptions\ThrottleRequestsException) {
                 return response()->json([
                     'status' => false,
                     'message' => 'Too many requests. Please slow down.',
                 ], 429);
             }
-        
+
             if ($e instanceof Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
                 return response()->json([
                     'status' => false,
                     'message' => 'Resource not found.',
                 ], 404);
             }
-        
+
             return response()->json([
                 'status' => false,
                 'message' => 'Something went wrong.',

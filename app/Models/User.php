@@ -26,7 +26,9 @@ class User extends Authenticatable
         'profile_image',
         'status',
         'credits',
-        'stripe_customer_id'
+        'stripe_customer_id',
+        'country_id',
+        'dob',
     ];
 
     /**
@@ -50,5 +52,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
     }
 }

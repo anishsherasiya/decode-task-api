@@ -6,15 +6,18 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\BaseController' => $baseDir . '/app/Http/Controllers/BaseController.php',
     'App\\Http\\Controllers\\BlogController' => $baseDir . '/app/Http/Controllers/BlogController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CreditSystemController' => $baseDir . '/app/Http/Controllers/CreditSystemController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
-    'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
-    'App\\Http\\Middleware\\RateLimitLogin' => $baseDir . '/app/Http/Middleware/RateLimitLogin.php',
+    'App\\Http\\Controllers\\WebhookController' => $baseDir . '/app/Http/Controllers/WebhookController.php',
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',
     'App\\Models\\BlogImage' => $baseDir . '/app/Models/BlogImage.php',
+    'App\\Models\\Country' => $baseDir . '/app/Models/Country.php',
+    'App\\Models\\Purchase' => $baseDir . '/app/Models/Purchase.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',

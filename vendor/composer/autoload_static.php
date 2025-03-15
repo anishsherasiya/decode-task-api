@@ -547,15 +547,18 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
     );
 
     public static $classMap = array (
+        'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/BaseController.php',
         'App\\Http\\Controllers\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/BlogController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CreditSystemController' => __DIR__ . '/../..' . '/app/Http/Controllers/CreditSystemController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
-        'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
-        'App\\Http\\Middleware\\RateLimitLogin' => __DIR__ . '/../..' . '/app/Http/Middleware/RateLimitLogin.php',
+        'App\\Http\\Controllers\\WebhookController' => __DIR__ . '/../..' . '/app/Http/Controllers/WebhookController.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\BlogImage' => __DIR__ . '/../..' . '/app/Models/BlogImage.php',
+        'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
+        'App\\Models\\Purchase' => __DIR__ . '/../..' . '/app/Models/Purchase.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
